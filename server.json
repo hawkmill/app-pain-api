@@ -3,8 +3,8 @@
   "name": "io.github.hawkmill/app-pain-api",
   "title": "App Pain API",
   "description": "What users hate about ANY iOS/Android app: clustered complaints, evidence, trends. No key needed.",
-  "version": "0.3.0",
-  "websiteUrl": "https://app-pain-api.quiet-delta.workers.dev/docs#mcp",
+  "version": "0.3.1",
+  "websiteUrl": "https://hawkmill.com/docs#mcp",
   "repository": {
     "url": "https://github.com/hawkmill/app-pain-api",
     "source": "github"
@@ -12,7 +12,7 @@
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://app-pain-api.quiet-delta.workers.dev/mcp",
+      "url": "https://hawkmill.com/mcp",
       "headers": [
         {
           "name": "x-api-key",
