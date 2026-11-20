@@ -11,7 +11,7 @@
 [![No key required](https://img.shields.io/badge/install-no%20key%20required-ff5c39.svg)](#install)
 [![SealKeeper Service SEAL](https://api.sealkeeper.run/v1/agents/fDqzcJpHcseJBJHI25PjmQfg56SPRd-AQv84Txh3zWw/badge.svg)](https://sealkeeper.run/agents/app-pain-api.quiet-delta.workers.dev/app-pain-api-quiet-delta-workers-dev)
 
-[Live server](https://app-pain-api.quiet-delta.workers.dev/mcp) · [Docs](https://app-pain-api.quiet-delta.workers.dev/docs) · [OpenAPI 3.1](https://app-pain-api.quiet-delta.workers.dev/openapi.json) · [Pain index (101 apps)](https://app-pain-api.quiet-delta.workers.dev/pains) · [Pricing](https://app-pain-api.quiet-delta.workers.dev/#pricing)
+[Live server](https://hawkmill.com/mcp) · [Docs](https://hawkmill.com/docs) · [OpenAPI 3.1](https://hawkmill.com/openapi.json) · [Pain index (101 apps)](https://hawkmill.com/pains) · [Pricing](https://hawkmill.com/#pricing)
 
 </div>
 
@@ -52,24 +52,23 @@ Also ships two prompts (`competitor_pain_report`, `app_pain_deep_dive`) so an ag
 Server URL — paste it into any MCP client, **no key needed**:
 
 ```
-https://app-pain-api.quiet-delta.workers.dev/mcp
+https://hawkmill.com/mcp
 ```
 
 | Client | How |
 |---|---|
-| **Claude Code** | `claude mcp add --transport http app-pain-api https://app-pain-api.quiet-delta.workers.dev/mcp` |
+| **Claude Code** | `claude mcp add --transport http app-pain-api https://hawkmill.com/mcp` |
 | **Claude Desktop / claude.ai** | Settings → Connectors → *Add custom connector* → paste the URL |
 | **ChatGPT** | Settings → Apps & Connectors → Developer mode → *Create* → paste the URL, auth: *No authentication* |
-| **Cursor** | `~/.cursor/mcp.json` → `{"mcpServers":{"app-pain-api":{"url":"https://app-pain-api.quiet-delta.workers.dev/mcp"}}}` |
-| **VS Code** | `code --add-mcp '{"name":"app-pain-api","type":"http","url":"https://app-pain-api.quiet-delta.workers.dev/mcp"}'` |
+| **Cursor** | `~/.cursor/mcp.json` → `{"mcpServers":{"app-pain-api":{"url":"https://hawkmill.com/mcp"}}}` |
+| **VS Code** | `code --add-mcp '{"name":"app-pain-api","type":"http","url":"https://hawkmill.com/mcp"}'` |
 | **Windsurf** | `~/.codeium/windsurf/mcp_config.json` → `{"mcpServers":{"app-pain-api":{"serverUrl":"…/mcp"}}}` |
 | **Codex CLI** | `~/.codex/config.toml` → `[mcp_servers.app-pain-api]` `url = "…/mcp"` |
 | **Gemini CLI** | `~/.gemini/settings.json` → `{"mcpServers":{"app-pain-api":{"httpUrl":"…/mcp"}}}` |
-| **stdio-only clients** | `npx -y mcp-remote https://app-pain-api.quiet-delta.workers.dev/mcp` |
+| **stdio-only clients** | `npx -y mcp-remote https://hawkmill.com/mcp` |
 
-**Keyless limits**: unlimited cached results plus a few new analyses per day. Want your own quota (10/month free, more on paid tiers)? Register at [`POST /v1/register`](https://app-pain-api.quiet-delta.workers.dev/docs) and add an `x-api-key` header. When the server-side allowance runs out, `mine_app_pain_points` degrades gracefully — it hands your agent the prepared negative reviews to cluster with its own model.
+**Keyless limits**: unlimited cached results plus a few new analyses per day. Want your own quota (10/month free, more on paid tiers)? Register at [`POST /v1/register`](https://hawkmill.com/docs) and add an `x-api-key` header. When the server-side allowance runs out, `mine_app_pain_points` degrades gracefully — it hands your agent the prepared negative reviews to cluster with its own model.
 
-> **Mainland China**: `*.workers.dev` needs a system proxy or TUN mode to connect.
 
 ## Try asking your agent
 
@@ -79,15 +78,15 @@ https://app-pain-api.quiet-delta.workers.dev/mcp
 
 ## Also a plain REST API
 
-Everything the MCP server does is available over REST with JSON responses and a full [OpenAPI 3.1 spec](https://app-pain-api.quiet-delta.workers.dev/openapi.json) — same cache, same quota, one `GET`:
+Everything the MCP server does is available over REST with JSON responses and a full [OpenAPI 3.1 spec](https://hawkmill.com/openapi.json) — same cache, same quota, one `GET`:
 
 ```bash
-curl -s "https://app-pain-api.quiet-delta.workers.dev/v1/apps/ios/835599320/painpoints"
+curl -s "https://hawkmill.com/v1/apps/ios/835599320/painpoints"
 ```
 
 ## Pricing
 
-Free tier forever (no credit card) · **Starter $9/mo** (any country, 500-review depth, watch 2 competitors) · **Pro $29/mo** (daily alerts for 15 competitors, unlimited analyses) — details on the [site](https://app-pain-api.quiet-delta.workers.dev/#pricing).
+Free tier forever (no credit card) · **Starter $9/mo** (any country, 500-review depth, watch 2 competitors) · **Pro $29/mo** (daily alerts for 15 competitors, unlimited analyses) — details on the [site](https://hawkmill.com/#pricing).
 
 ## Notes
 
@@ -95,5 +94,5 @@ Free tier forever (no credit card) · **Starter $9/mo** (any country, 500-review
 - All tools are read-only (`readOnlyHint` annotations set).
 - Speaks the classic `initialize` handshake (2024-11-05 → 2025-11-25) and answers the mandatory `server/discover` RPC from the 2026-07-28 spec — modern clients probe, see the supported version list, and fall back to the handshake automatically.
 - Cold analyses take 30–120s and stream progress notifications; repeat calls hit a 7-day cache and return in milliseconds.
-- [Privacy](https://app-pain-api.quiet-delta.workers.dev/privacy) · [Terms](https://app-pain-api.quiet-delta.workers.dev/terms) · [Acceptable use](https://app-pain-api.quiet-delta.workers.dev/aup)
+- [Privacy](https://hawkmill.com/privacy) · [Terms](https://hawkmill.com/terms) · [Acceptable use](https://hawkmill.com/aup)
 - Contact: [support@hawkmill.com](mailto:support@hawkmill.com)
