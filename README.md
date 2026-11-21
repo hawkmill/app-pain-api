@@ -86,7 +86,7 @@ curl -s "https://hawkmill.com/v1/apps/ios/835599320/painpoints"
 
 ## Pricing
 
-Free tier forever (no credit card) · **Starter $9/mo** (any country, 500-review depth, watch 2 competitors) · **Pro $29/mo** (daily alerts for 15 competitors, unlimited analyses) — details on the [site](https://hawkmill.com/#pricing).
+Free tier forever (no credit card) · **Starter $9/mo** or $90/yr (any country, 500-review depth, watch 2 competitors) · **Pro $29/mo** or $290/yr (daily alerts for 15 competitors, unlimited analyses) — details on the [site](https://hawkmill.com/#pricing).
 
 ## Notes
 
