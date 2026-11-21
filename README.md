@@ -67,7 +67,7 @@ https://hawkmill.com/mcp
 | **Gemini CLI** | `~/.gemini/settings.json` → `{"mcpServers":{"app-pain-api":{"httpUrl":"…/mcp"}}}` |
 | **stdio-only clients** | `npx -y mcp-remote https://hawkmill.com/mcp` |
 
-**Keyless limits**: unlimited cached results plus a few new analyses per day. Want your own quota (10/month free, more on paid tiers)? Register at [`POST /v1/register`](https://hawkmill.com/docs) and add an `x-api-key` header. When the server-side allowance runs out, `mine_app_pain_points` degrades gracefully — it hands your agent the prepared negative reviews to cluster with its own model.
+**Keyless limits**: unlimited cached results plus a few new analyses per day. Want your own quota? Every new key starts with a **14-day Starter trial** (no card), then 10/month free — more on paid tiers. Register at [`POST /v1/register`](https://hawkmill.com/docs) and add an `x-api-key` header. When the server-side allowance runs out, `mine_app_pain_points` degrades gracefully — it hands your agent the prepared negative reviews to cluster with its own model.
 
 
 ## Try asking your agent
