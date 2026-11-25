@@ -4,14 +4,14 @@
 
 # App Pain API
 
-**What users hate about any iOS/Android app — clustered complaints, evidence quotes, trends. One MCP server, no API key.**
+**What users hate about any iOS/Android/macOS app, WordPress plugin or Chrome extension — clustered complaints, evidence quotes, trends. One MCP server, no API key.**
 
 [![MCP](https://img.shields.io/badge/MCP-2025--06--18-7ee0c0.svg)](https://modelcontextprotocol.io)
 [![Streamable HTTP](https://img.shields.io/badge/transport-Streamable%20HTTP-7ec4ff.svg)](https://modelcontextprotocol.io/specification/2025-06-18/basic/transports)
 [![No key required](https://img.shields.io/badge/install-no%20key%20required-ff5c39.svg)](#install)
 [![SealKeeper Service SEAL](https://api.sealkeeper.run/v1/agents/fDqzcJpHcseJBJHI25PjmQfg56SPRd-AQv84Txh3zWw/badge.svg)](https://sealkeeper.run/agents/app-pain-api.quiet-delta.workers.dev/app-pain-api-quiet-delta-workers-dev)
 
-[Live server](https://hawkmill.com/mcp) · [Docs](https://hawkmill.com/docs) · [OpenAPI 3.1](https://hawkmill.com/openapi.json) · [Pain index (101 apps)](https://hawkmill.com/pains) · [Pricing](https://hawkmill.com/#pricing)
+[Live server](https://hawkmill.com/mcp) · [Docs](https://hawkmill.com/docs) · [OpenAPI 3.1](https://hawkmill.com/openapi.json) · [Pain index (124 apps)](https://hawkmill.com/pains) · [Pricing](https://hawkmill.com/#pricing)
 
 </div>
 
@@ -31,7 +31,7 @@ Built for competitive research and agent workflows: one tool call replaces a wee
 }
 ```
 
-<sub>↑ real output — TikTok, US App Store. Cached analyses return instantly; ~100 popular apps are pre-analyzed and always free to read.</sub>
+<sub>↑ real output — TikTok, US App Store. Cached analyses return instantly; 124 popular apps are pre-analyzed and always free to read.</sub>
 
 ## The tools
 
@@ -67,7 +67,7 @@ https://hawkmill.com/mcp
 | **Gemini CLI** | `~/.gemini/settings.json` → `{"mcpServers":{"app-pain-api":{"httpUrl":"…/mcp"}}}` |
 | **stdio-only clients** | `npx -y mcp-remote https://hawkmill.com/mcp` |
 
-**Keyless limits**: unlimited cached results plus a few new analyses per day. Want your own quota? Every new key starts with a **14-day Starter trial** (no card), then 10/month free — more on paid tiers. Register at [`POST /v1/register`](https://hawkmill.com/docs) and add an `x-api-key` header. When the server-side allowance runs out, `mine_app_pain_points` degrades gracefully — it hands your agent the prepared negative reviews to cluster with its own model.
+**Keyless limits**: unlimited cached results plus a few new analyses per day. Want your own quota? Every new key starts with a **14-day Starter trial** (no card), then 30 analyses/month free (plus a 10-analysis signup bonus) — more on paid tiers. Register at [`POST /v1/register`](https://hawkmill.com/docs) and add an `x-api-key` header. When the server-side allowance runs out, `mine_app_pain_points` degrades gracefully — it hands your agent the prepared negative reviews to cluster with its own model.
 
 
 ## Try asking your agent
